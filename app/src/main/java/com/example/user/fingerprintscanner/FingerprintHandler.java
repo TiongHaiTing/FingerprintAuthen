@@ -2,6 +2,7 @@ package com.example.user.fingerprintscanner;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.Manifest;
@@ -65,6 +66,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             FingerprintManager.AuthenticationResult result) {
 
         Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
+        Intent i = new Intent(context, HomeActivity.class);
+        context.startActivity(i);
     }
 
 }
